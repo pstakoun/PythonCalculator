@@ -1,6 +1,7 @@
 import math
 from datetime import datetime
 
+# Ask user for an integer with the given prompt.
 def getInt(prompt):
     while True:
         i = input(prompt)
@@ -10,12 +11,14 @@ def getInt(prompt):
             continue
         return i
 
+# Attempt to convert given value to an integer.
 def tryToInt(i):
     if i % 1 == 0:
         return int(i)
     else:
         return i
 
+# Log the given calculation.
 def log(calculation):
     now = datetime.now()
     time = "[" + str(now.year) + "/" + str(now.month) + "/" + str(now.day) + " " + str(now.hour) + ":" + str(now.minute) + ":" + str(now.second) + "]"
@@ -23,6 +26,7 @@ def log(calculation):
     with open("log.txt", "a") as log:
         log.write(time + " " + calculation + "\n")
 
+# Recive and add two numbers.
 def addition():
     a = tryToInt(getInt("Enter a number: "))
     b = tryToInt(getInt("Enter another number: "))
@@ -34,6 +38,7 @@ def addition():
     log(calculation)
     input("")
 
+# Recive and subtract two numbers.
 def subtraction():
     a = tryToInt(getInt("Enter a number: "))
     b = tryToInt(getInt("Enter another number: "))
@@ -45,6 +50,7 @@ def subtraction():
     log(calculation)
     input("")
 
+# Recive and multiply two numbers.
 def multiplication():
     a = tryToInt(getInt("Enter a number: "))
     b = tryToInt(getInt("Enter another number: "))
@@ -56,6 +62,7 @@ def multiplication():
     log(calculation)
     input("")
 
+# Recive and divide two numbers.
 def division():
     a = tryToInt(getInt("Enter a number: "))
     b = tryToInt(getInt("Enter another number: "))
@@ -67,6 +74,7 @@ def division():
     log(calculation)
     input("")
 
+# Recive and get the exponent of two numbers.
 def exponentiation():
     a = tryToInt(getInt("Enter a number: "))
     b = tryToInt(getInt("Enter another number: "))
@@ -78,6 +86,7 @@ def exponentiation():
     log(calculation)
     input("")
 
+# Recive and get the square root of a number.
 def squareroot():
     a = tryToInt(getInt("Enter a number: "))
     answer = math.sqrt(a)
@@ -88,6 +97,7 @@ def squareroot():
     log(calculation)
     input("")
 
+# Recive and get the factorial of a number.
 def factorial():
     while True:
         a = tryToInt(getInt("Enter a number: "))
@@ -100,7 +110,8 @@ def factorial():
     print(calculation)
     log(calculation)
     input("")
-    
+
+# Prompt user for an operation to excecute.
 def getOperation():
     while True:
         print("1) Addition")
@@ -116,6 +127,7 @@ def getOperation():
             if operation != None and operation % 1 == 0 and operation >= 1 and operation <= 7:
                 break
 
+        # Excecute given operation.
         if operation == 1:
             addition()
         elif operation == 2:
@@ -131,4 +143,5 @@ def getOperation():
         elif operation == 7:
             factorial()
 
+# Launch calculator.
 getOperation()
