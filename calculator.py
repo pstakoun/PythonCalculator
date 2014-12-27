@@ -26,7 +26,7 @@ def log(calculation):
     with open("log.txt", "a") as log:
         log.write(time + " " + calculation + "\n")
 
-# Recive and add two numbers.
+# Receive and add two numbers.
 def addition():
     a = tryToInt(getInt("Enter a number: "))
     b = tryToInt(getInt("Enter another number: "))
@@ -38,7 +38,7 @@ def addition():
     log(calculation)
     input("")
 
-# Recive and subtract two numbers.
+# Receive and subtract two numbers.
 def subtraction():
     a = tryToInt(getInt("Enter a number: "))
     b = tryToInt(getInt("Enter another number: "))
@@ -50,7 +50,7 @@ def subtraction():
     log(calculation)
     input("")
 
-# Recive and multiply two numbers.
+# Receive and multiply two numbers.
 def multiplication():
     a = tryToInt(getInt("Enter a number: "))
     b = tryToInt(getInt("Enter another number: "))
@@ -62,7 +62,7 @@ def multiplication():
     log(calculation)
     input("")
 
-# Recive and divide two numbers.
+# Receive and divide two numbers.
 def division():
     a = tryToInt(getInt("Enter a number: "))
     b = tryToInt(getInt("Enter another number: "))
@@ -74,7 +74,7 @@ def division():
     log(calculation)
     input("")
 
-# Recive and get the exponent of two numbers.
+# Receive and get the exponent of two numbers.
 def exponentiation():
     a = tryToInt(getInt("Enter a number: "))
     b = tryToInt(getInt("Enter another number: "))
@@ -86,7 +86,7 @@ def exponentiation():
     log(calculation)
     input("")
 
-# Recive and get the square root of a number.
+# Receive and get the square root of a number.
 def squareroot():
     a = tryToInt(getInt("Enter a number: "))
     answer = math.sqrt(a)
@@ -97,7 +97,7 @@ def squareroot():
     log(calculation)
     input("")
 
-# Recive and get the factorial of a number.
+# Receive and get the factorial of a number.
 def factorial():
     while True:
         a = tryToInt(getInt("Enter a number: "))
